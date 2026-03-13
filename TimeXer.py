@@ -230,12 +230,10 @@ class Model(nn.Module):
 
         # Embedding
         self.en_embedding = EnEmbedding(self.n_vars, configs.d_model, self.patch_len, configs.dropout)
-        self.ex_embedding = DataEmbedding_inverted \
-            (configs.seq_len, configs.d_model, configs.embed, configs.freq,configs.dropout)
+        self.ex_embedding = DataEmbedding_inverted(configs.seq_len, configs.d_model, configs.embed, configs.freq,
+                                                    configs.dropout)
 
         self.learnable_bias = nn.Parameter(torch.full((1, self.pred_len, self.n_vars), 0.02457890473306179))
-        # self.factor = nn.Parameter(torch.ones(1) * 0.2525)
-        # self.learnable_bias_1 = nn.Parameter(torch.zeros(1, configs.pred_len, self.n_vars))
 
         # Encoder-only architecture
         self.encoder = Encoder(
