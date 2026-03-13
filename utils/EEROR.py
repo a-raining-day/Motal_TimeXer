@@ -1,0 +1,3 @@
+class DontKnownError(Exception):
+    pass
+
