@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+
+LSTM、XGBoost（SHAP-XGBoost）、LightGBM、Random Forest、Arima、KNN（K-Nearest Neighbors）
+
+数据：
+    湖北省碳排放交易所的官方网站（https://www.hbets.cn/）
+    广州碳交易市场（https://www.szets.com/）
+    深圳碳交易市场的碳交易数据进行了额外的实验验证（https://www.cnemission.com/）
+
+数据集：
+    https://www.kaggle.com/datasets/sid321axn/gold-price-prediction-dataset/data?select=FINAL_USO.csv - 黄金ETF价格
+
+需要运行的：
+    单模型预测比较/comparison.py
